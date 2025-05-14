@@ -8,36 +8,49 @@
 </head>
 <body>
     <div class="game-container">
-        <div class="score-container">
-            <span>Score: </span>
-            <span id="score">0</span>
+        <div class="header">
+            <div class="score-container">
+                <span class="score-label">SCORE</span>
+                <span id="score" class="score-value">0</span>
+            </div>
         </div>
         
-        <div class="keyword-container">
-            <div class="keyword left">
-                <h2 id="leftKeyword"></h2>
-                <p id="leftSearchCount" class="search-count"></p>
+        <div class="main-container">
+            <div class="keyword-container left">
+                <div class="keyword-content">
+                    <h2 id="leftKeyword" class="keyword-text"></h2>
+                    <p id="leftSearchCount" class="search-count"></p>
+                </div>
+                <div class="keyword-overlay"></div>
             </div>
             
-            <div class="vs">VS</div>
+            <div class="vs-container">
+                <div class="vs-text">VS</div>
+                <div class="vs-subtext">검색량이</div>
+            </div>
             
-            <div class="keyword right">
-                <h2 id="rightKeyword"></h2>
-                <div class="button-container">
-                    <button id="higherButton">▲ 더 많이 검색됨</button>
-                    <button id="lowerButton">▼ 더 적게 검색됨</button>
+            <div class="keyword-container right">
+                <div class="keyword-content">
+                    <h2 id="rightKeyword" class="keyword-text"></h2>
+                    <div class="button-container">
+                        <button id="higherButton" class="choice-button higher">더 많다</button>
+                        <button id="lowerButton" class="choice-button lower">더 적다</button>
+                    </div>
                 </div>
+                <div class="keyword-overlay"></div>
             </div>
         </div>
     </div>
 
     <div id="gameOverModal" class="modal">
         <div class="modal-content">
-            <h2>게임 오버!</h2>
-            <p>점수: <span id="finalScore">0</span></p>
-            <input type="text" id="playerName" placeholder="이름을 입력하세요" maxlength="10">
-            <button id="saveScore">점수 저장</button>
-            <button id="restartGame">다시 시작</button>
+            <h2 class="modal-title">GAME OVER</h2>
+            <p class="final-score">SCORE: <span id="finalScore">0</span></p>
+            <input type="text" id="playerName" placeholder="닉네임을 입력하세요" maxlength="10">
+            <div class="modal-buttons">
+                <button id="saveScore" class="modal-button save">저장하기</button>
+                <button id="restartGame" class="modal-button restart">다시하기</button>
+            </div>
             <div id="rankings" class="rankings"></div>
         </div>
     </div>
