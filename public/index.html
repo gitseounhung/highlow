@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Lower Korea</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="score-container">
+            <span>Score: </span>
+            <span id="score">0</span>
+        </div>
+        
+        <div class="keyword-container">
+            <div class="keyword left">
+                <h2 id="leftKeyword"></h2>
+                <p id="leftSearchCount" class="search-count"></p>
+            </div>
+            
+            <div class="vs">VS</div>
+            
+            <div class="keyword right">
+                <h2 id="rightKeyword"></h2>
+                <div class="button-container">
+                    <button id="higherButton">▲ 더 많이 검색됨</button>
+                    <button id="lowerButton">▼ 더 적게 검색됨</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <h2>게임 오버!</h2>
+            <p>점수: <span id="finalScore">0</span></p>
+            <input type="text" id="playerName" placeholder="이름을 입력하세요" maxlength="10">
+            <button id="saveScore">점수 저장</button>
+            <button id="restartGame">다시 시작</button>
+            <div id="rankings" class="rankings"></div>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "higher-lower-korea",
+  "version": "1.0.0",
+  "description": "Higher Lower game with Korean search trends",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "firebase-admin": "^11.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
